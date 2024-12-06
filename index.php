@@ -7,12 +7,12 @@ use App\Person;
 function getUserInput($prompt)
 {
     echo $prompt;
-    return trim(fgets(STDIN)); // Получаем строку с клавиатуры и удаляем лишние пробелы
+    return trim(fgets(STDIN)); 
 }
 
 try {
     $name = getUserInput("Введите имя: ");
-    $age = (int) getUserInput("Введите возраст: "); // Преобразуем введенный возраст в число
+    $age = (int) getUserInput("Введите возраст: "); 
 
     $person = new Person($name, $age);
     echo "Имя: " . $person->getName() . ", Возраст: " . $person->getAge() . "\n";
